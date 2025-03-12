@@ -1,0 +1,57 @@
+1.What is cloud computing : 
+
+* Practice of using the network of remote servers hosted on the internet to store , manage , process data , rather than local server or a PC . 
+
+* Cloud computing is a model where businesses and individuals can use computing resources (like servers, databases, and storage) over the internet without owning or managing the physical infrastructure
+
+* In cloud Computing : 
+    1. someone else own the servers 
+    2. someone else Hires the IT people 
+    3. someone else pays the rent on real state 
+    4. You are responsible for your configuring  clous services and  code , someone else take care of the rest . 
+
+ 
+2.Evolution of cloud hosting  ? 
+
+    1.Dedicated Server (Traditional Hosting) – The Early Days
+        * A physical server exclusively assigned to one business or user.
+        * High performance but expensive.
+        * Not easily scalable—if traffic increases, you need to buy more servers.
+
+    2. Virtual Private Server (VPS) – The First Step Toward Virtualization 
+        * A single physical server is partitioned into multiple virtual servers using virtualization technology.
+        * Each VPS acts like a mini-dedicated server with its own resources but shares the physical machine.
+        * More affordable than a dedicated server
+        * More scalable than dedicated servers.
+        * If one VPS consumes too many resources, others on the same machine may experience performance issues.
+    
+    3. Shared Hosting – The Budget-Friendly Option
+        * A single physical server is shared among multiple users.
+        * Resources (CPU, RAM, bandwidth) are distributed among different websites.
+        * Best suited for small websites and blogs.
+        * Performance issues if one site consumes too many resources.
+
+    4. Cloud Hosting – The Modern Solution 
+        * Instead of relying on a single physical server, cloud hosting uses multiple servers (a cloud infrastructure) working together.
+        * If one server fails, another takes over (high availability).
+        * Dynamically scales resources based on demand.
+        * Scalable – Resources can be increased or decreased instantly.
+        * Reliable – No single point of failure.
+        * Pay-as-you-go pricing – Only pay for what you use.
+
+3.  Chronological overview of key AWS service launches :- 
+        * Simple Queue Service (SQS) : first AWS service launched for public use in 2004
+        * Simple Storage Service (S3) : was launched in March 2006
+        * Elastic Compute Cloud (EC2) : was launched in August 2006
+        * In November 2010 , it was reported that all amazon retail sites have been migrated to AWS 
+        * AWS began offering certification program from April 2013 . 
+
+4. What is Cloud Service Provider (CSP) :- 
+        
+
+    
+
+
+
+
+
