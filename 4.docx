@@ -1,0 +1,66 @@
+AWS Ground Station service :- 
+    * It is a fully managed service that lets you control satellite communications , process data and scale your operations without worrying about building or managing your own Ground stations infrastructure . 
+
+    * Use case Ground Station :- 
+        -> weather forcasting 
+        -> surface imaging 
+        -> communications 
+        -> video broadcast 
+    * To use Ground Stations :
+        -> You schedule a contact (select satellite ,start time ,end time , and the ground location) . 
+        -> Use the AWS Ground Station EC2 AMI to launch EC2 instances that will uplink and downlink data during the contract or recieve downlinked data in  an amazon s3 bucket. 
+
+
+AWS Outposts – Bringing AWS to Your Data Center 🏢☁️
+    * AWS Outposts is a fully managed service that extends AWS infrastructure, services, and tools to on-premises data centers or co-location facilities.
+
+    * It allows businesses to run AWS services locally in their own data centers while still being connected to the AWS cloud for hybrid cloud computing.
+
+    * AWS Outposts is a rack of servers running AWS infrastructure on your physical location .
+
+    * Why Use AWS Outposts?
+        🔹 For workloads requiring low latency (e.g., real-time processing in factories, hospitals, or financial services).
+        🔹 For data residency requirements (e.g., government, banking, and healthcare industries that must keep data within a country).
+        🔹 For hybrid cloud environments (businesses that want to mix on-premises and cloud computing).
+
+    * How AWS Outposts Works
+        1️⃣ AWS delivers pre-configured hardware racks to your data center.
+        2️⃣ You install and connect Outposts to your network.
+        3️⃣ AWS remotely manages and updates it as part of your AWS infrastructure.
+        4️⃣ You can run AWS services locally while still integrating with AWS Regions when needed.
+
+    * What is Server Rack  , its all types and dimension : - 
+        * Server Rack : a frame design to hold IT equipments . 
+        * Rack Height :-    
+            @ U stands for rack Units or "U spaces" which is equal to  1.75 inch . 
+        * So a typical industry standart Server Rack is 48U (7 feet high) .
+        * Common full size rack cage is 42U 
+
+    * So a AWS Outposts comes in three form Factors :- 42U , 2U ,1U 
+    
+Common AWS Terminologies :- 
+    1️⃣ High Availability → Elastic Load Balancer (ELB)
+
+            * High Availability (HA) means ensuring that applications remain accessible even if some components fail.
+            * AWS Solution: Elastic Load Balancer (ELB) distributes traffic across multiple instances in different Availability Zones (AZs) to prevent downtime.
+
+    2️⃣ High Scalability → Vertical & Horizontal Scaling
+
+            * Scalability refers to the ability to handle increasing workloads.
+            * Vertical Scaling (Scaling Up/Down): Increasing instance size (e.g., upgrading from t2.medium to m5.large).
+            * Horizontal Scaling (Scaling Out/In): Adding or removing multiple instances to distribute the load.
+            * AWS Solution: Auto Scaling, Elastic Load Balancer, EC2 Instance Types.
+    3️⃣ High Elasticity → Auto Scaling Group (ASG)
+
+            * Elasticity means the ability to automatically scale resources up or down based on demand.
+            * AWS Solution: Auto Scaling Groups (ASG) dynamically adjust the number of EC2 instances based on CPU usage, traffic, etc.
+    4️⃣ High Fault Tolerance → RDS Multi-AZ
+
+            * Fault Tolerance ensures that systems continue running even if a failure occurs.
+            * AWS Solution: RDS Multi-AZ keeps a standby database in a different AZ that automatically takes over in case of failure.
+            * Other fault-tolerant services: Route 53 Failover Routing, EC2 Auto Recovery, and S3 Cross-Region Replication (CRR).
+
+5️⃣ High Durability → CloudEndure Disaster Recovery
+
+            * Durability ensures data is not lost over time, even in extreme failures.
+            * CloudEndure Disaster Recovery :continuously replicates your machine into a low cost staging area in your target aws account and preferred location enabling fast and reliable recovery in case of IT data centers failure .

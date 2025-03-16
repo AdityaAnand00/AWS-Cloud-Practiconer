@@ -1,0 +1,224 @@
+What is AWS Managment Console :- 
+    The AWS Management Console is a web-based user interface (UI) that allows you to manage and interact with AWS services visually instead of using the command line.
+
+IAM -> Identity and Access Management is a security service in AWS that helps you manage users, groups, roles, and permissions to control who can access AWS resources and what they can do.
+
+To create a user in AWS :- 
+    1. Search for "IAM" in the search bar and open the IAM Dashboard.
+
+    2. Create a User
+           * In the left menu, click on Users → Click "Add users".
+           * Enter a username.
+           * Choose AWS Management Console access (if you want login access) or Programmatic access (for API, CLI, SDK access).
+           * Set permissions (Attach policies directly or add to a USER GROUP).
+
+    3. Create a User Group (if needed)
+        * Navigate to User Groups → Click "Create group".
+        * Enter a Group Name (e.g., "Developers", "Admins").
+        * Attach policies to define permissions (e.g., AdministratorAccess, AmazonS3ReadOnlyAccess).
+        * Add the newly created user to this group.
+
+
+What is Programmatic Access in AWS IAM (It is a type of access given for a user When "Creating an User" )?
+Programmatic access allows an IAM user to interact with AWS services via APIs, CLI (Command Line Interface), SDKs, or other automation tools—without needing to log into the AWS Management Console.
+
+    When to Use Programmatic Access?
+    🔹 Automating tasks with AWS CLI or SDKs
+    🔹 Running scripts or applications that interact with AWS
+    🔹 Connecting external services to AWS (e.g., CI/CD tools like Jenkins)
+
+
+What is Kondratiev Waves (Innovation waves or  K -waves):- 
+    * cycle like phenomenon in the global world economy . 
+    * Each waves irreversibly changes the society on the global scale . 
+    * The latest wave is CLOUD technology .
+
+Burning Platform :- 
+    * A term used when a company abandons old technology for new technology with the uncertaininty of success and can be motivated by fear that the organization future survival hinges . 
+
+Computing Power in CLOUD and its Evolution ? 
+    * It is defined as the throughput measured at which a computer can complete a computaional task . 
+            -> General Computing : Xeon CPU Processor . 
+            -> GPU Computing : 50x faster  than Traditional CPU . Ex : AWS Inferentiare(Inf1)   
+            -> Quantum Computing : 100 million times after . Ex : AWS Bracket .
+
+Benefits of Cloud :- 
+    * Agility 
+    * Pay-as-you-go pricing 
+    * economy of scale 
+           => Cloud providers aggregate demand from numerous customers, achieving higher economies of scale, which translates into lower variable costs for users.
+    * Global Reach
+           => Cloud platforms offer global networks of data centers, enabling organizations to deploy applications closer to end-users worldwide 
+    * Security 
+    * Reliability 
+           => Cloud computing offers data backup, disaster recovery, and business continuity solutions
+    * High Availability
+    * Scalibility 
+    * Elasticity 
+           => Cloud computing provides the ability to automatically adjust resources to match workload demands
+    * Fault Tolerance 
+    * Disaster Recovery 
+
+SIX Advantages of Cloud :- 
+    1. Trade Capital Expense for variable expense  
+            * This means that instead of making substantial upfront investments in data centers and servers, businesses can opt for a pay-as-you-go model, paying only for the computing resources they consume.
+
+    2. Benefit from massive economic of scale 
+            * You are " sharing the cost with other customers " to get unbeatable savings . Hundreds of thousands of customers utilizing a fraction of server . 
+
+    3. Stop Guessing capacity 
+            * " Scale up or down " to meet the current need . Launch or destroy any service whenever instead of paying for the ideal or underutilized servers .
+
+    4. Increase speed and agility  
+            * "Launch resources within a few clicks in a minute ." Instead of waiting days or weeks of your IT to implemnet the solution on premise . 
+    
+    5. Stop spending money on running and mainiting data centers 
+            * "Focus on your own customers" , developing and configuring your applications. Instead of operations such such as racking ,stacking and powering servers . 
+   
+    6. Go global in minutes  
+            * "Deploy your app in multiple regions around the world with a few clicks ". Provides lower latency and better user experience . 
+
+Understanding AWS Regions and Availability Zones (AZs) :- 
+
+    1. AWS Regions (Ohio, Virginia, California, Oregon, etc.)
+            * A Region is a geographically separate area where AWS has its data centers. Each AWS region consists of multiple isolated Availability Zones (AZs).
+    2. Availability Zones (AZs)
+            * An Availability Zone (AZ) is a physically separate data center within a Region. Each Region has at least three(min is 3 , max is 6) AZs, and some have more.
+            * US East (N. Virginia) - us-east-1 has 6 AZs:
+                us-east-1a
+                us-east-1b
+                us-east-1c
+                us-east-1d
+                us-east-1e
+                us-east-1f
+        ✅ AZ ≠ Single Data Center
+        ✅ Each AZ consists of one or more data centers
+        ✅ A region with 6 AZs may have 12+ physical data centers
+
+    # More on AWS REGIONS  and AZs:- 
+            * Each amazon region is designed to be made complete isolated from other amazon regions . 
+            * Doing this achieves greates possible fault Tolerance and Stability . 
+            * Each AZs are isolated , but the AZs within a region are connected through low latency links . 
+            * Each AZ is designed as a "independent (failure Zone or Fault Domain) " .
+            * Each AZ is physically separated  within a typical metropoliton region and are located lower risk flood plains. 
+            * Each AZ has UPS and onsite backup generation facilities . 
+            * Data Centers within a AZ are designed to be supplied by independent substations to reduce the risk of an event on the power grid impacting more than one availability zone. 
+            * "AZ are redundantly connected to multiple tier-1 transit provider " thus aiming    high availability, fault tolerance, low latency, and fast data transfer . 
+                    -> In AWS networking, redundant means that there are multiple, independent connections in place so that if one connection fails, another takes over without causing downtime.
+                    -> Each AZ has multiple network links to the internet.
+                    -> These links are connected to different Tier-1 internet providers.
+                    -> If one link or provider fails, AWS automatically routes traffic through another available connection.
+                    -> This ensures continuous availability and prevents network outages
+
+Regional and Global Services : 
+    * Global services operate across all AWS Regions, with their control planes and data planes not confined to a specific Region. This global nature allows for unified management and consistent configurations worldwide
+    * Ex : IAM  , Amazon Cloudfront , Amazon Route S3 
+
+    * Regional services are confined to specific AWS Regions, meaning their operations and data are isolated within that Region. This design supports compliance with data residency regulations and allows for tailored configurations based on regional requirements.
+    * Ex : EC2 , RDS , S3 
+
+When user chooses a REGION there are four factors one should consider :- 
+    1.What Regulatory compliance does the region meet ? 
+    2.What is the cost of AWS services in the region ? 
+    3.What AWS services are available in the region ? 
+    4.What is the distance or latency to my end users ?
+
+Availability Zones (AZs) :
+    * A physical locations made up of one or more data centers . 
+
+Fault Domain :- 
+    * A section of a network that is vulnerable to the damage if a critical device or system fails. 
+    * The purpose of a fault domain is that if a failure occurs it will not cascade outside the domain , limiting the possible damage . 
+
+    Fault Level :- 
+        * A fault level is a collection of fault domains . 
+
+    Scope of a Fault Domain are as follows :- 
+        * specific servers in a rack 
+        * an entire rack in data center 
+        * an entire room in data center 
+        * an entire data center building 
+    Its upto CSP that defines the boundries of a domain . 
+    * Ex :- An AWS region could be FAULT LEVEL . An availability zone would be FAULT DOMAIN . 
+
+
+AWS Global Network: The High-Speed Backbone of AWS :- 
+
+    * The AWS Global Network is Amazon's private, high-speed fiber-optic network that connects AWS Regions, Availability Zones (AZs), and edge locations across the world. It is designed for low latency, high availability, security, and performance.
+
+    * How Does the AWS Global Network Work?
+        -> AWS does not rely on the public internet for internal traffic.
+        -> Instead, AWS owns and operates a global fiber-optic network that connects its data centers worldwide.
+        -> When you transfer data between AWS services (like S3, EC2, or RDS) in different regions, the traffic travels over Amazon’s private network, not the public internet.
+        -> This makes it faster, more secure, and more reliable.
+    
+    * What is a CDN (Content Delivery Network)?
+        -> A Content Delivery Network (CDN) is a globally distributed network of servers that helps deliver content faster, more securely, and reliably to users based on their geographic location.
+
+        -> Instead of serving content from a single central server, a CDN caches content at multiple edge locations worldwide, reducing latency, bandwidth usage, and load on the origin server.
+
+        -> How Does a CDN Work?
+               @ User Requests Content:
+                    A user requests a webpage, video, image, or file from a website using a browser.
+               @ Nearest Edge Server Responds:
+                    The CDN routes the request to the closest edge location instead of the origin server.
+                    If the requested content is already cached at the edge location, it is served instantly.
+               @ Fetching from the Origin (if needed):
+                    If the content is not cached, the CDN fetches it from the origin server, caches it, and serves it to the user.
+               @ Future Requests Served from Cache:
+                    The next time someone requests the same content, the CDN delivers it without fetching from the origin.
+        NOTE :- 
+        *  CDN is a technology or concept used to distribute content efficiently.
+        *  Think of CDN as the blueprint (the concept of caching and delivering content efficiently), and Edge Locations as the execu tion (the physical servers that make it happen).
+        *  In AWS, Edge Locations are the backbone of CloudFront (AWS's CDN service).
+
+
+    * How Edge Locations Work as "On and Off Ramps" to the AWS Global Network?
+        
+        AWS Edge Locations act as entry (on-ramps) and exit (off-ramps) for data moving between end users and the AWS Global Network.
+
+            ✅ On-Ramp (Inbound Traffic)
+            When a user uploads data to AWS, it first goes to the nearest Edge Location.
+            The Edge Location then forwards the request over the AWS Global Network to the appropriate AWS Region.
+            This ensures that the request avoids the slow public internet and gets routed optimally.
+            ✅ Off-Ramp (Outbound Traffic)
+            When a user requests data (e.g., a website, video, or API response), AWS serves it from the nearest Edge Location instead of the main AWS data center.
+            If the data is not cached at the Edge Location, it fetches the content from the AWS Region and caches it for future requests.
+            This reduces latency and improves performance.
+
+    * POP (Point of Presence) :- 
+            -> A Point of Presence (PoP) is a physical location where AWS caches content, optimizes traffic, and connects users to AWS services with lower latency.
+            -> Edge Locations are AWS's Points of Presence (PoPs) Since Edge Locations are AWS data centers that serve cached content (CloudFront), handle DNS queries (Route 53), and filter traffic (WAF),
+            -> Ex: Cloudfront , amazon S3 transfer accelaration , AWS global accelerator  
+    
+
+What is AWS Direct Connect?
+    * AWS Direct Connect is a dedicated network connection from your on-premises data center to AWS Cloud, bypassing the public internet. It provides a private, high-speed, and low-latency connection between your network and AWS services.
+
+    * "AWS Direct Connection Location" 
+        -> These are trusted partnered data centers . 
+        -> AWS Direct Connect Location = Midpoint(INTERCONNECTION POINT) Between Your Data Center & AWS Cloud. 
+        -> Instead of sending data over the public internet(we BYPASS this), your data first reaches an AWS Direct Connect location, where it is then securely transferred to AWS over a dedicated, high-speed private network.
+
+
+    * How Does AWS Direct Connect Work?
+        1️⃣ You set up a dedicated fiber-optic connection from your on-premises network to an AWS Direct Connect location.
+        2️⃣ AWS provides a Direct Connect endpoint (PoP) at a colocation facility (third-party data center).
+        3️⃣ Your network connects to AWS using a private, dedicated link instead of the public internet.
+        4️⃣ You can use VLANs (Virtual LANs) and AWS Virtual Private Cloud (VPC) peering to connect to different AWS services securely.
+
+    * Direct Connect has two very-fast network connections options :        
+        1. Lower bandwidth : 50MBps t0 500MBps 
+        2. Higher bandwidth : 1GBps to 10GBps 
+
+Local Zones :- 
+    * These are data centers which are located very close to densly populated area to  provide a single digit millisecond low latency performance (eg . 7ms) for that area . 
+    * Purpose of local zones is to provide high demanding applications sensitive to latencies . Ex :- Media and entertainment , ML , AD- tech . 
+
+What Are AWS Wavelength Zones?
+    * AWS Wavelength Zones are AWS infrastructure deployments embedded within telecom providers' 5G networks. They allow developers to build applications that require ultra-low latency (single-digit milliseconds) for mobile and edge computing use cases.
+    * How AWS Wavelength Works
+            🔹 AWS Wavelength Zones are placed inside telecom carrier data centers (e.g., Verizon, Vodafone, SK Telecom).
+            🔹 These zones extend AWS services (EC2, S3, etc.) into the 5G network, allowing applications to process data closer to end-users instead of traveling to a faraway AWS Region.
+            🔹 The AWS Global Network connects Wavelength Zones back to AWS Regions for centralized data processing when needed.
+

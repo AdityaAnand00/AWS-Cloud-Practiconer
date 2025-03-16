@@ -47,10 +47,125 @@
         * AWS began offering certification program from April 2013 . 
 
 4. What is Cloud Service Provider (CSP) :- 
-        
+        * A Cloud Service Provider (CSP) is a company that offers computing services over the internet. These services include:
 
+            1. Infrastructure as a Service (IaaS) – Virtual servers, storage, networking (e.g., AWS, Microsoft Azure, Google Cloud).
+            2. Platform as a Service (PaaS) – Development environments, databases, and middleware (e.g., Google App Engine, AWS Elastic Beanstalk).
+            3. Software as a Service (SaaS) – Fully managed applications (e.g., Google Workspace, Microsoft Office 365).
+
+        * Landscape of CSP :- 
+            1. Tier 1 (Top Tier) = AWS  , Microsoft Azure , Google Cloud Platform(GCP) ,Alibaba Cloud 
+            2. Tier 2 (Mid Tier) = IBM Cloud ,  Oracle Cloud , Rackspace(open stack)
+            3. Tier 3 (Light Tier) = Vultr , Linode , Digital ocean 
+
+        * Common Cloud Servies :- (AWS has more than 200 cloud services. Here are the major/Core cloud computing services )
+            2. Networking [Ex :- EC2 virtual machine]
+            1. Compute    [Ex :- EBS virtual Hard Drives]
+            3. Storage    [Ex :- RDS SQL Databases]   
+            4. Database   [Ex :- VPC private cloud network]
+
+5. Scaling and its Types : Scaling is the process of increasing or decreasing computing resources to handle varying workloads in a cloud environment. It can be done in two ways:
+    1. Vertical Scaling (Scaling Up/Down)
+        🔹 Definition: Increasing or decreasing the power of a single machine (VM or physical server).
+        🔹 How it works? You add more CPU, RAM, or storage to an existing instance instead of adding more machines.
+
+    2. Horizontal Scaling (Scaling Out/In)
+        🔹 Definition: Increasing or decreasing the number of machines (instances/servers) to handle more load.
+        🔹 How it works? Instead of upgrading a single machine, you add more instances and distribute the load using a load balancer.
     
+    * Load Balancer = A Load Balancer is a network device or software that distributes incoming traffic evenly across multiple servers to optimize performance, ensure reliability, and prevent overload.
+        With a load balancer:
+        ✅ Traffic is evenly distributed among servers.
+        ✅ High availability—if one server fails, others take over.
+        ✅ Scalability—can handle increased traffic dynamically.
+        ✅ Better performance—faster response times for users.
 
+5. Evolution of Cloud Computing :- 
+        1. Dedicated :- 
+            * A physical server wholly utilized by a single customer 
+            * You have to guess your capacity 
+            * You have to overpay for your underutilized server 
+            * No vertical scaling , you need a manual migration 
+        2. VMs 
+            * A Virtual Machine (VM) is a software-based emulation of a physical computer. It runs an OS and applications just like a physical computer but is independent of the actual hardware.
+            * Hyperviser lets us run the VMs . A hypervisor (also called a Virtual Machine Monitor or VMM) is software that allows multiple virtual machines (VMs) to run on a single physical machine (host system). It acts as a layer between the hardware and the operating system (OS), managing the distribution of resources like CPU, memory, and storage among the VMs.
+            * A physical server shared by multiple customers . 
+            * You are to pay for a fraction of the server . 
+        3. Containers 
+            * Virtual Machines running multiple containers 
+            * Docker Daemon is the name of the software layer that lets you run multiple containers 
+            * You can maximize the utilize of available capacity which is more cost effective 
+            * Your containers share the same underlying OS so containers are more effecient than multiple VMs 
+            * Definition: Lightweight virtualized environments that run applications with their dependencies.
+            * Infrastructure: Managed by developers/team (more control).
+            * Scaling: Can be manually or automatically scaled (via Kubernetes, Docker Swarm).
+            * Execution Time: Long-running; stays active unless stopped.
+            * Startup Time: Faster than serverless once running.
+            * State: Can be stateful or stateless (more flexible).
+            * Networking: Full control over networking, ports, and configurations.
+            * Resource Allocation: Fixed CPU & memory allocation (even if idle).
+            * Cost: Pay for allocated resources (even if unused).
+            * Best For: Full applications, microservices, background jobs.
+            * Examples: Docker, Kubernetes, AWS Fargate, Azure Container Instances.
+        
+        4. Functions 
+            * Are managed by VMs running managed containers .The cloud provider automatically provisions VMs and containers to execute functions.Developers do not interact with the underlying infrastructure.
+            * Known as serversless compute 
+            * You upload a peice of code , choose the amount of memory and duration . 
+            * Only responsible for code and data , nothing else 
+            * very cost effective , only pay for the time the code is being running . VMs only run when there is a code to be executed . 
+            * Cold start is a side effect of this setup 
+            * Definition: Small, event-driven code execution units managed by a cloud provider.
+            * Infrastructure: Fully managed; you only provide code.
+            * Scaling: Automatically scales per request.
+            * Execution Time: Short-lived (e.g., AWS Lambda max 15 min).
+            * Startup Time: May experience cold starts after inactivity.
+            * State: Stateless by design (does not store data between executions).
+            * Networking: Limited control over network settings.
+            * Resource Allocation: Dynamically assigned on demand.
+            * Cost: Pay only for execution time (highly cost-effective).
+            * Best For: Event-driven workloads, API calls, data processing, IoT.
+            * Examples: AWS Lambda, Azure Functions, Google Cloud Functions.
+        
+6. Types of Cloud Computing :
+    1.SaaS : Software as a service for customers . A profuct that is run and managed by service providers. Dont just worry about how the software is maintained . It just works and remain available . Ex: office365 , gmail 
+
+    2.PaaS : Platform as a service for Developers. Focus on deployments and managments of the app . Dont worry about the provisioning , configuring or understanding the hardware or OS .
+    Ex : Heroku 
+
+    3.IaaS : Infrastructure as a service for Administrators. Basic building block for cloud IT . Provide access to networking features , computers and data storage space .Dont worry about the IT staff, data centers and Hardwares .Ex : Azure , AWS 
+
+7. Cloud Computing deployments model :- 
+    1️⃣ Public Cloud 🌍
+        ✅ Owned & Managed by: Third-party cloud providers (AWS, Azure, Google Cloud).
+        ✅ Resources: Shared among multiple users (multi-tenant).
+        ✅ Access: Available over the internet to businesses & individuals.
+        ✅ Cost: Pay-as-you-go model (no upfront hardware costs).
+    2️⃣ Private Cloud 🔒
+        ✅ Owned & Managed by: A single organization (on-premises or hosted by a provider).
+        ✅ Resources: Dedicated to one company (single-tenant).
+        ✅ Access: Restricted to the organization (not publicly accessible).
+        ✅ Cost: Higher upfront investment but more control & security.
+
+    3️⃣ Hybrid Cloud 🔄 (Public + Private)
+        ✅ Combination of Public & Private Cloud.
+        ✅ Critical & sensitive data is kept in private cloud, while other workloads run in public cloud.
+        ✅ Allows data & applications to move between environments.        
+    4️⃣ Community Cloud 🤝
+        ✅ Shared cloud environment used by multiple organizations with common goals.
+        ✅ More secure than public cloud, cheaper than private cloud.
+        ✅ Governed by organizations sharing it.
+        
+8. What is Cross-Cloud? 🌐☁️
+   * Cross-Cloud is an advanced cloud strategy that allows seamless interoperability between multiple cloud providers (e.g., AWS, Azure, Google Cloud) while maintaining unified management and operations.
+
+   * It enables businesses to use different cloud services from multiple vendors without vendor lock-in, improving flexibility, reliability, and performance.
+        
+  * Why Cross-Cloud?
+    * Avoid Vendor Lock-in: Companies are not restricted to a single cloud provider.
+    * Optimized Cost & Performance: Workloads can be distributed based on cost and efficiency.
+    * Disaster Recovery & Redundancy: Increases resilience by using multiple cloud providers.
+    * Best-of-Breed Services: Use the best features from different clouds (e.g., AI from Google Cloud, Storage from AWS, Compute from Azure).
 
 
 
